@@ -22,5 +22,14 @@ docker run --rm --platform linux/amd64 -v $(pwd):/work -w /work ubuntu ./run
 ```
 and then i got the flag.
 
+### IMP 
+In docker i didn need to do chmod +x run cuz
+Mac uses a virtual filesystem layer (via Docker Desktop) to bridge between macOS and Linux
+Files mounted with -v from Mac often get execute permissions automatically because macOS and Docker Desktop are lenient about it behind the scenes
+So the x bit gets set without you doing it manually.
+
+<img width="754" height="298" alt="image" src="https://github.com/user-attachments/assets/e71351a6-2d2e-4879-8eba-0ad5773b354a" />
+
+
 ## Flag
 `picoCTF{U51N6_Y0Ur_F1r57_F113_e5559d46}`
