@@ -4,16 +4,9 @@ eax register stores the return value of the funcn in this chall the funcn is mai
 to run gdb we have to run certain cmnds
 ## SETUP
 ```bash
-docker run -it --platform linux/amd64 \
---cap-add=SYS_PTRACE \
---security-opt seccomp=unconfined \
--v $(pwd):/workspace \
-ubuntu
+docker run -it -v $(pwd):/workspace gdb-env
 ```
-```bash
-apt update
-apt install -y gdb gcc
-```
+and open the container epic_gould on docker.
 ```bash
 cd /workspace
 ```
